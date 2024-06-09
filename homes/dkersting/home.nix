@@ -81,6 +81,10 @@
     enable = true;
     userName = "dgruending";
     userEmail = "d.kersting@posteo.de";
+    signing = {
+      key = "7977630C";
+      signByDefault = true;
+    };
     extraConfig = {
       init.defaultBranch = "main";
     };
