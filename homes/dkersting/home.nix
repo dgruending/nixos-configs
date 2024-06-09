@@ -75,6 +75,16 @@
   home.sessionVariables = {
     EDITOR = "vim";
   };
+
+  # Git configuration
+  programs.git = {
+    enable = true;
+    userName = "dgruending";
+    userEmail = "d.kersting@posteo.de";
+    extraConfig = {
+      init.defaultBranch = "main";
+    };
+  };
   
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
