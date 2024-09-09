@@ -107,7 +107,6 @@
   hardware.sane.enable = true; 
 
   # Enable sound with pipewire.
-  sound.enable = true;
   hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
@@ -147,6 +146,12 @@
     isNormalUser = true;
     description = "Franziska Kersting";
     extraGroups = [ "steam" "configuration"];
+  };
+
+  # Enable Ausweisapp
+  programs.ausweisapp = {
+    enable = true;
+    openFirewall = true;
   };
 
   # Install firefox.a

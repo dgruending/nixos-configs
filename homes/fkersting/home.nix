@@ -3,8 +3,8 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
-  home.username = "dkersting";
-  home.homeDirectory = "/home/dkersting";
+  home.username = "fkersting";
+  home.homeDirectory = "/home/fkersting";
 
   # This value determines the Home Manager release that your configuration is
   # compatible with. This helps avoid breakage when a new Home Manager release
@@ -75,35 +75,7 @@
   home.sessionVariables = {
     EDITOR = "vim";
   };
-
-  # Enable gpg
-  programs.gpg.enable = true;
-  services.gpg-agent.enable = true;
-
-  # Git configuration
-  programs.git = {
-    enable = true;
-    userName = "dgruending";
-    userEmail = "d.kersting@posteo.de";
-    signing = {
-      key = "7977630C";
-      signByDefault = true;
-    };
-    extraConfig = {
-      init.defaultBranch = "main";
-    };
-  };
   
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
-
-  # Alacritty
-  programs.alacritty = {
-    enable = true;
-    # TODO settings = ?
-  };
-
-  # BASHRC
-  programs.bash.bashrcExtra = "PATH=$PATH:/home/dkersting/go/bin";
-  programs.bash.enable = true;
 }
